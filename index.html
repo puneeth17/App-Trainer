@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="angular.js"></script>
+<script src="firebase.js"></script>
+<script src="angularfire.min.js"></script>
+<script src="Registration.js"></script>
+<style>
+
+body {
+   
+text-align:center;
+
+}
+</style>
+</head>
+<body ng-app="apptrainer">
+	<section class="container">
+	<div class="Registratoion">
+		<div style="padding: 20px">
+			<form ng-controller="registerController">
+				<h1>Register to App Trainer</h1>
+				<p>
+					<input type="text" name="Name" ng-model="username"
+						="userName" value="" placeholder="Username">
+				</p>
+				<p>
+					<input type="text" name="Age" id="Age" ng-model="age" placeholder="Age">
+				</p>
+				<p>
+					<input type="text" name="Height" id="Height" ng-model="height"
+						placeholder="Height">
+				</p>
+				<p>
+					<input type="text" name="Password" id="Password" ng-model="password"
+						placeholder="Password">
+				</p>
+				<p>
+					<input type="text" name="Sex" id="Sex" ng-model="sex"
+						placeholder="Sex(M/F)" maxlength="1">
+				</p>
+				<p>
+					<input type="text" name="Weight" id="Weight" ng-model="weight"
+						placeholder="Weight">
+				</p>
+				<p>
+					<input type="text" name="Email" id="Email" ng-model="email"
+						placeholder="Email">
+				</p>
+				<p>
+					<input type="text" name="Phone" id="Phone" ng-model="phone"
+						placeholder="Phone">
+				</p>
+				<p>
+					<input type="date" name="Date of birth" id="Date Of Birth" ng-model="date"
+						placeholder="Date Of Birth">
+				</p>
+				<p>
+					<input type="text" name="Secret Question" id="Secret Question"
+						ng-model="question" placeholder="Secret Question">
+				</p>
+				<p>
+					<input type="text" name="Secret Answer" id="Secret Answer" ng-model="answer"
+						placeholder="Secret Answer">
+				</p>
+				<p class="submit">
+					<input type="submit" name="commit" ng-click="register($event)"
+						value="Register">
+				</p>
+			</form>
+		</div>
+</body>
+</html>
