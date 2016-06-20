@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="login.css">
+</head>
+<body ng-app="LoginApp" ng-controller="LoginCtrl">
+	<div class="login-page">
+		<div class="form">
+			<form class="register-form">
+				<h2>Register Form</h2>
+		      	<input ng-model="email" required type="email" placeholder="email address"/>
+		      	<input ng-model="password1" required type="password" placeholder="password"/>
+		      	<input ng-model="password2" required type="password" placeholder="confirm password"/>
+		      	<button ng-click="register()">create</button>
+		      	<p class="message">Already registered? <a href="#">Sign In</a></p>
+		      	<div class="noti">
+					<span id="notiRegister"></span>
+				</div>
+		    </form>
+			<form name="form">
+				<h2>Login Form</h2>
+				<input ng-model="username" required type="email" placeholder="email address"/>
+		      	<input ng-model="password" required type="password" placeholder="password"/>
+				<button ng-click="login()">Login</button>
+				<p class="message">Not registered? <a href="#">Create an account</a></p>
+				<div class="noti">
+					<span id="notiLogin"></span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/firebase/firebase.js"></script>
+	<script src="../bower_components/angularfire/dist/angularfire.js"></script>
+	<script src="login.js"></script>
+</body>
+</html>
